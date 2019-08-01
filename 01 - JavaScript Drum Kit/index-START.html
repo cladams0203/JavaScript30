@@ -58,7 +58,15 @@
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
 <script>
-
+  const endPlay = (element) => {
+    if(element.propertyName !== 'transform') return;
+    element.target.classList.remove('playing');
+  }
+  const play = (element) => {
+    const sound = document.querySelector(`audio[data-key="${element.keyCode}"]`);
+    const key = document.querySelector(`div[data-key="${element.keyCode}"]`);
+    if(!sound) return;
+  }
 </script>
 
 
